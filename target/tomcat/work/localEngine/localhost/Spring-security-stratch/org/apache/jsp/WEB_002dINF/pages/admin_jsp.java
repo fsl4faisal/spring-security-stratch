@@ -61,42 +61,84 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("<html>\r\n");
-      out.write("<body>\r\n");
-      out.write("\t<h1>Title: ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${title}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("</h1>\r\n");
-      out.write("\t<h1>Message: ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${message}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("</h1>\r\n");
-      out.write("\t\r\n");
-      out.write("\t");
+      out.write("\r\n");
+      out.write("<head>\r\n");
+      out.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n");
+      out.write("\r\n");
+      out.write("<link rel=\"stylesheet\"\r\n");
+      out.write("\thref=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">\r\n");
+      out.write("<script\r\n");
+      out.write("\tsrc=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js\"></script>\r\n");
+      out.write("<script\r\n");
+      out.write("\tsrc=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("<title>Login</title>\r\n");
       if (_jspx_meth_c_005furl_005f0(_jspx_page_context))
         return;
       out.write("\r\n");
+      out.write("<script>\r\n");
+      out.write("\tfunction formSubmit() {\r\n");
+      out.write("\t\tdocument.getElementById(\"logoutForm\").submit();\r\n");
+      out.write("\t}\r\n");
+      out.write("</script>\r\n");
       out.write("\r\n");
-      out.write("\t<form action=\"");
+      out.write("</head>\r\n");
+      out.write("\r\n");
+      out.write("<form action=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logoutUrl}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\" method=\"post\" id=\"logoutForm\">\r\n");
-      out.write("\t\t<input type=\"hidden\" name=\"");
+      out.write("\t<input type=\"hidden\" name=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${_csrf.parameterName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\"\r\n");
-      out.write("\t\t\tvalue=\"");
+      out.write("\t\tvalue=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${_csrf.token}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\" />\r\n");
-      out.write("\t</form>\r\n");
+      out.write("</form>\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\t<script>\r\n");
-      out.write("\t\tfunction formSubmit() {\r\n");
-      out.write("\t\t\tdocument.getElementById(\"logoutForm\").submit();\r\n");
-      out.write("\t\t}\r\n");
-      out.write("\t</script>\r\n");
+      out.write("<body>\r\n");
       out.write("\r\n");
+      out.write("\t<div class=\"container\">\r\n");
+      out.write("\t\t<div class=\"row\">\r\n");
+      out.write("\t\t\t<div class=\"col-md-10\">\r\n");
+      out.write("\t\t\t\t<h1>Title: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${title}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("</h1>\r\n");
       out.write("\r\n");
+      out.write("\t\t\t\t<div class=\"col-md-4\"></div>\r\n");
+      out.write("\t\t\t\t<div class=\"col-md-4\">\r\n");
+      out.write("\t\t\t\t\t<h1>Message: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${message}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("</h1>\r\n");
       out.write("\r\n");
-      out.write("\t");
+      out.write("\t\t\t\t\t");
       if (_jspx_meth_c_005fif_005f0(_jspx_page_context))
         return;
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t\t<div class=\"col-md-4\"></div>\r\n");
+      out.write("\t\t\t\t</div>\r\n");
+      out.write("\t\t\t\t\r\n");
+      out.write("\t\t\t\t</div>\r\n");
+      out.write("\t\t\t\t<div class=\"col-md-2\">\r\n");
+      out.write("\t\t\t\t\t<h2>\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t\t\t<a href=\"javascript:formSubmit()\"> Logout</a> ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.userPrincipal.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\r\n");
+      out.write("\t\t\t\t\t</h2>\r\n");
+      out.write("\t\t\t\t\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t</div>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
@@ -121,9 +163,9 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_005furl_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005furl_005f0.setParent(null);
-    // /WEB-INF/pages/admin.jsp(9,1) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/pages/admin.jsp(17,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005furl_005f0.setValue("/j_spring_security_logout");
-    // /WEB-INF/pages/admin.jsp(9,1) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/pages/admin.jsp(17,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005furl_005f0.setVar("logoutUrl");
     int _jspx_eval_c_005furl_005f0 = _jspx_th_c_005furl_005f0.doStartTag();
     if (_jspx_th_c_005furl_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -142,20 +184,14 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f0.setParent(null);
-    // /WEB-INF/pages/admin.jsp(25,1) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/pages/admin.jsp(43,5) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.userPrincipal.name != null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
     if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("\t\t<h2>\r\n");
-        out.write("\t\t\tWelcome to secured page :");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.userPrincipal.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-        out.write("| <a\r\n");
-        out.write("\t\t\t\thref=\"javascript:formSubmit()\"> Logout</a>\r\n");
-        out.write("\t\t</h2>\r\n");
         out.write("\r\n");
-        out.write("\t");
+        out.write("\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_005fif_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
